@@ -1,9 +1,9 @@
-const express = require('express');
+import express, { Request, Response } from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const greetings = [
+const greetings: string[] = [
   'Hello!',
   'Hi there!',
   'Welcome!',
@@ -16,7 +16,7 @@ const greetings = [
   'Salutations!',
 ];
 
-app.get('/', (req, res) => {
+app.get('/', (_req: Request, res: Response) => {
   const now = new Date();
   const isoTime = now.toISOString();
   const readableTime = now.toUTCString();
@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 </html>`);
 });
 
-app.get('/api/greeting', (req, res) => {
+app.get('/api/greeting', (_req: Request, res: Response) => {
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
   res.status(200).json({ greeting });
 });
@@ -57,4 +57,4 @@ const server = app.listen(PORT, () => {
   process.stdout.write(`Server listening on port ${PORT}\n`);
 });
 
-module.exports = { app, server };
+export { app, server };

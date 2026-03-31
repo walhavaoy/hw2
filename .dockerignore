@@ -1,5 +1,4 @@
-.git
-node_modules
-README.md
-.dockerignore
-Dockerfile
+node_modules/
+dist/
+.git/
+*.md

@@ -8,8 +8,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "allowJs": true
+    "declaration": true
   },
-  "include": ["./**/*.ts", "./**/*.js"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

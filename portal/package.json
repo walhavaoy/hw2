@@ -1,0 +1,11 @@
+{
+  "name": "@tmpclaw/portal",
+  "version": "0.1.1",
+  "description": "tmpclaw portal web UI shell",
+  "private": true,
+  "scripts": {
+    "build": "cp -r src/ dist/",
+    "clean": "rm -rf dist/"
+  },
+  "license": "ISC"
+}

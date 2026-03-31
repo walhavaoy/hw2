@@ -1,0 +1,93 @@
+/*
+ * tmpclaw Portal — Warm Ember Theme
+ *
+ * Deep charcoal backgrounds with rich amber/honey accents.
+ * All MFE bundles must use var(--token) references — never hardcode colors.
+ */
+
+:root {
+  /* Backgrounds */
+  --bg: #1a1714;
+  --surface: #242019;
+  --surface2: #2e2a23;
+
+  /* Borders */
+  --border: #3d3830;
+  --border-hover: #4d4838;
+
+  /* Text */
+  --text: #e8e0d4;
+  --text-dim: #9a9088;
+
+  /* Accent — warm amber/honey */
+  --accent: #d4944c;
+  --accent-hover: #e0a85e;
+  --accent-text: #1a1714;
+
+  /* Semantic states */
+  --success: #6dba5e;
+  --warning: #d4a44c;
+  --error: #e06050;
+  --info: #5c9ed4;
+
+  /* Shadows & overlays */
+  --shadow: rgba(20, 16, 12, 0.5);
+  --shadow-lg: rgba(20, 16, 12, 0.7);
+  --overlay: rgba(20, 16, 12, 0.7);
+
+  /* Semantic backgrounds (translucent) */
+  --success-bg: rgba(109, 186, 94, 0.15);
+  --warning-bg: rgba(212, 164, 76, 0.15);
+  --error-bg: rgba(212, 92, 76, 0.15);
+  --info-bg: rgba(92, 158, 212, 0.15);
+
+  /* Misc */
+  --swatch-label-bg: rgba(0, 0, 0, 0.5);
+  --font-family: system-ui, -apple-system, sans-serif;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg: #f5f0eb;
+  --surface: #ffffff;
+  --surface2: #ede7e0;
+
+  /* Borders */
+  --border: #d4ccc2;
+  --border-hover: #b8b0a6;
+
+  /* Text */
+  --text: #1a1714;
+  --text-dim: #6b635a;
+
+  /* Accent — warm amber/honey */
+  --accent: #b87a30;
+  --accent-hover: #a06820;
+  --accent-text: #ffffff;
+
+  /* Semantic states */
+  --success: #3d8b2e;
+  --warning: #b8862e;
+  --error: #c43c2c;
+  --info: #2e7bb8;
+
+  /* Shadows & overlays */
+  --shadow: rgba(60, 50, 40, 0.1);
+  --shadow-lg: rgba(60, 50, 40, 0.2);
+  --overlay: rgba(60, 50, 40, 0.5);
+
+  /* Semantic backgrounds (translucent) */
+  --success-bg: rgba(61, 139, 46, 0.12);
+  --warning-bg: rgba(184, 134, 46, 0.12);
+  --error-bg: rgba(196, 60, 44, 0.12);
+  --info-bg: rgba(46, 123, 184, 0.12);
+
+  /* Misc */
+  --swatch-label-bg: rgba(255, 255, 255, 0.7);
+  --font-family: system-ui, -apple-system, sans-serif;
+}

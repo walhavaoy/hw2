@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tmpclaw Portal</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>tmpclaw</h1>
+    <nav class="nav">
+      <a class="active" href="#">Dashboard</a>
+      <a href="#">Agents</a>
+      <a href="#">Tasks</a>
+      <a href="#">Settings</a>
+    </nav>
+  </div>
+
+  <main>
+  <div class="section-title">Color Palette</div>
+  <div class="palette">
+    <div class="swatch" style="background: var(--bg)"><span style="color: var(--text)">bg</span></div>
+    <div class="swatch" style="background: var(--surface)"><span style="color: var(--text)">surface</span></div>
+    <div class="swatch" style="background: var(--surface2)"><span style="color: var(--text)">surface2</span></div>
+    <div class="swatch" style="background: var(--border)"><span style="color: var(--text)">border</span></div>
+    <div class="swatch" style="background: var(--accent)"><span style="color: var(--accent-text)">accent</span></div>
+    <div class="swatch" style="background: var(--success)"><span style="color: var(--accent-text)">success</span></div>
+    <div class="swatch" style="background: var(--warning)"><span style="color: var(--accent-text)">warning</span></div>
+    <div class="swatch" style="background: var(--error)"><span style="color: var(--accent-text)">error</span></div>
+  </div>
+
+  <div class="section-title">Card Grid</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Agent Runner <span class="badge badge-success">Running</span></div>
+      <div class="card-meta">Last deployed 2 hours ago</div>
+      <div class="card-body">Processing 12 tasks across 3 namespaces with 99.2% uptime.</div>
+      <div class="card-actions">
+        <button class="btn btn-primary">View Logs</button>
+        <button class="btn">Restart</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Build Service <span class="badge badge-warning">Degraded</span></div>
+      <div class="card-meta">Last deployed 5 hours ago</div>
+      <div class="card-body">Queue depth elevated. 3 builds pending, avg wait 4m 20s.</div>
+      <div class="card-actions">
+        <button class="btn btn-primary">View Queue</button>
+        <button class="btn">Scale Up</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Task Database <span class="badge badge-success">Healthy</span></div>
+      <div class="card-meta">Last backup 30 min ago</div>
+      <div class="card-body">1,247 tasks stored. 89 active, 1,158 completed. 2.1 GB used.</div>
+      <div class="card-actions">
+        <button class="btn btn-primary">Browse</button>
+        <button class="btn">Export</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Data Table</div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Agent</th>
+          <th>Status</th>
+          <th>Tasks</th>
+          <th>Uptime</th>
+          <th>Last Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>code-review-bot</td>
+          <td><span class="badge badge-success">Running</span></td>
+          <td>47</td>
+          <td>99.8%</td>
+          <td>Just now</td>
+        </tr>
+        <tr>
+          <td>deploy-watcher</td>
+          <td><span class="badge badge-success">Running</span></td>
+          <td>23</td>
+          <td>99.5%</td>
+          <td>2 min ago</td>
+        </tr>
+        <tr>
+          <td>test-runner</td>
+          <td><span class="badge badge-warning">Slow</span></td>
+          <td>89</td>
+          <td>97.1%</td>
+          <td>5 min ago</td>
+        </tr>
+        <tr>
+          <td>log-analyzer</td>
+          <td><span class="badge badge-error">Stopped</span></td>
+          <td>12</td>
+          <td>45.2%</td>
+          <td>1 hour ago</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title">Detail Panel</div>
+  <div class="sidebar-layout">
+    <div class="list-panel">
+      <div class="list-item selected">
+        <div class="item-label">code-review-bot</div>
+        <div class="item-sub">Running - 47 tasks</div>
+      </div>
+      <div class="list-item">
+        <div class="item-label">deploy-watcher</div>
+        <div class="item-sub">Running - 23 tasks</div>
+      </div>
+      <div class="list-item">
+        <div class="item-label">test-runner</div>
+        <div class="item-sub">Slow - 89 tasks</div>
+      </div>
+      <div class="list-item">
+        <div class="item-label">log-analyzer</div>
+        <div class="item-sub">Stopped - 12 tasks</div>
+      </div>
+    </div>
+    <div class="detail-panel">
+      <h3>code-review-bot <span class="badge badge-success">Running</span></h3>
+      <p>Automated code review agent that analyzes pull requests for style, correctness, and security issues. Currently processing PR #342 in the portal repository.</p>
+      <div class="stat-group">
+        <div>
+          <span class="stat-label">CPU</span>
+          <div class="stat-value">23%</div>
+        </div>
+        <div>
+          <span class="stat-label">Memory</span>
+          <div class="stat-value">512 MB</div>
+        </div>
+        <div>
+          <span class="stat-label">Tasks/hr</span>
+          <div class="stat-value">8.3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <button class="btn" data-action="toggle-theme" data-testid="portal-button-themeToggle"
+    style="position:fixed;bottom:1rem;right:1rem;">Toggle Theme</button>
+  <script>
+    document.querySelector('[data-action="toggle-theme"]').addEventListener('click', function () {
+      var el = document.documentElement;
+      el.dataset.theme = el.dataset.theme === 'light' ? 'dark' : 'light';
+    });
+  </script>
+
+</body>
+</html>
